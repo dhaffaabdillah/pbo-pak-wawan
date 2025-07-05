@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+<body>
+    <script>
+        class BankAccount {
+            #saldo; // Private property
+
+            constructor(nama, saldoAwal) {
+                this.nama = nama;
+                this.#saldo = saldoAwal;
+            }
+
+            getSaldo() {
+                return `Saldo ${this.nama} adalah Rp${this.#saldo}`;
+            }
+
+            deposit(jumlah) {
+                this.#saldo += jumlah;
+            }
+        }
+
+        const akun = new BankAccount("Alice", 500000);
+        console.log(akun.getSaldo());
+        akun.deposit(200000);
+        console.log(akun.getSaldo());
+        // console.log(akun.#saldo); // Will throw an error because #saldo is private
+    </script>
+</body>
+</html>
