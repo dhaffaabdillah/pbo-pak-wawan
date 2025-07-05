@@ -1,0 +1,17 @@
+{
+  "name": "pbo-refactoring-testing",
+  "version": "1.0.0",
+  "description": "Praktik Refactoring dan Pengujian Perangkat Lunak",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "demo": "node demo.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

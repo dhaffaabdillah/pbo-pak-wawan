@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <script>
+    class Kendaraan {
+        constructor(nama) {
+            if (this.constructor === Kendaraan) {
+                throw new Error("Kelas abstrak tidak bisa diinstansiasi!");
+            }
+            this.nama = nama;
+        }
+        bergerak() {
+            throw new Error("Metode ini harus diimplementasikan di subclass!");
+        }
+    }
+
+    class Motor extends Kendaraan {
+        bergerak() {
+            return `${this.nama} berjalan di jalan raya!`;
+        }
+    }
+
+    const supra = new Motor("Supra X");
+    console.log(supra.bergerak());
+
+    </script>
+</body>
+</html>

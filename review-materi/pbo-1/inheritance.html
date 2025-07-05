@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        class Hewan {
+            constructor(nama) {
+                this.nama = nama;
+            }
+
+            bersuara() {
+                return `${this.nama} bersuara...`;
+            }
+        }
+
+        class Kucing extends Hewan {
+            constructor(nama, warna) {
+                super(nama);
+                this.warna = warna;
+            }
+
+            bersuara() {
+                return `${this.nama} mengeong!`;
+            }
+        }
+
+        const kucing = new Kucing("Milo", "Hitam");
+        console.log(kucing.bersuara()); // Milo mengeong!
+    </script>
+
+    </script>
+</body>
+</html>
